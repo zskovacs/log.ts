@@ -1,4 +1,4 @@
-import { ILogger } from "./iLogger";
+import { ILogger } from "./ilogger";
 import { LogLevel } from "./loglevel";
 
 export class MultiLogger implements ILogger {
