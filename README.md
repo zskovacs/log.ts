@@ -3,6 +3,7 @@
 
 ## Example
 **Simple console logger**
+
 It logs everything in console
 
 ```typescript
@@ -24,6 +25,7 @@ logger.error("Testing error...");
 ```
 
 **Add multiple logger**
+
 You can add multiple logger. For example if you want to log every debug message to console but not to local storage.
 
 ```typescript
@@ -45,6 +47,7 @@ logger.error("Testing error...");
 ```
 
 **Remove logger**
+
 You can remove the logger if you use NULL
 
 ```typescript
@@ -59,6 +62,7 @@ var logger = LogFactory.build(options);
 ```
 
 **Changing log level**
+
 !!USE CAUTION!! If you use multiple logger, this will change all of the loggers level
 
 ```typescript
