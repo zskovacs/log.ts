@@ -10,7 +10,7 @@ export class ConsoleLogger extends LoggerBase implements ILogger {
         }
     }
 
-    public debug(message: string, obj?: Object) {
+    public debug(message: string, obj?: Object): void  {
         if (this.logLevel & LogLevel.DEBUG) {
             let format = `${this.getLocalDateTime()}: [DEBUG] - ${message}`;
             if (obj) {
@@ -21,7 +21,7 @@ export class ConsoleLogger extends LoggerBase implements ILogger {
         }
     }
 
-    public info(message: string, obj?: Object) {
+    public info(message: string, obj?: Object): void  {
         if (this.logLevel & LogLevel.INFO) {
             let format = `${this.getLocalDateTime()}: [INFO] - ${message}`;
             if (obj) {
@@ -32,7 +32,7 @@ export class ConsoleLogger extends LoggerBase implements ILogger {
         }
     }
 
-    public warning(message: string, obj?: Object) {
+    public warning(message: string, obj?: Object): void  {
         if (this.logLevel & LogLevel.WARN) {
             let format = `${this.getLocalDateTime()}: [WARN] - ${message}`;
             if (obj) {
@@ -43,7 +43,7 @@ export class ConsoleLogger extends LoggerBase implements ILogger {
         }
     }
 
-    public error(message: string, obj?: Object) {
+    public error(message: string, obj?: Object): void  {
         if (this.logLevel & LogLevel.ERROR) {
             let format = `${this.getLocalDateTime()}: [ERROR] - ${message}`;
             if (obj) {

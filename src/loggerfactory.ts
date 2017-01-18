@@ -5,6 +5,10 @@ import { NullLogger } from "./nulllogger"
 import { MultiLogger } from "./multilogger"
 import { LogOption } from "./logoption"
 
+export { LogType } from "./logtype";
+export { LogLevel } from "./loglevel";
+export { LogOption } from "./logoption"
+
 
 export function build(option: Array<LogOption> | LogOption) : ILogger {
     if(Array.isArray(option)) {
@@ -22,7 +26,9 @@ export function create(option: LogOption): ILogger {
     switch (option.logType) {
         case LogType.CONSOLE:
             return new ConsoleLogger(option.logLevel);
-        case LogType.NULL:
+        case LogType.LOCALSTORAGE:
+            return new NullLogger();
+        default:
             return new NullLogger();
     }
     
