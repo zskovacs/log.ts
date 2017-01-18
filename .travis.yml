@@ -1,0 +1,16 @@
+language: node_js
+branches:
+  only:
+    - master
+cache:
+  diretories:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - 6.3
+  - 6.2
+  - 6.1
+  - 6
+script:
+  npm run compile
