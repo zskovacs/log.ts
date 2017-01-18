@@ -8,9 +8,6 @@ cache:
 notifications:
   email: false
 node_js:
-  - 6.3
-  - 6.2
-  - 6.1
-  - 6
+   - 6.9.2
 script:
   npm run compile
